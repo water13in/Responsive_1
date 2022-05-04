@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형레이아웃</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body id="top">
+    <header>
+        <div>
+            <h1>
+                <a href="#">
+                    <img src="images/panstar.png" alt="팬스타로고" />
+                </a>
+            </h1>
+
+            <nav class="pc_menu">
+                <ul>
+                    <li><a href="#">팬스타소개</a></li>
+                    <li><a href="#">사업분야</a></li>
+                    <li><a href="#">고객지원</a></li>
+                    <li><a href="#">미디어센터</a></li>
+                    <li><a href="#">인재채용</a></li>
+                </ul>
+            </nav><!-- .pc_menu end -->
+
+            <!-- i태그는 인라인 p태그는 블록 요소라서 인라인요소인 span 태그사용 -->
+            <i class="mobile xi-bars"><span>메뉴보기</span></i>
+            <nav class="mobile_menu">
+                <ul>
+                    <li><a href="#">팬스타소개</a></li>
+                    <li><a href="#">사업분야</a></li>
+                    <li><a href="#">고객지원</a></li>
+                    <li><a href="#">미디어센터</a></li>
+                    <li><a href="#">인재채용</a></li>
+                </ul>
+            </nav><!-- .mobile_menu end -->
+        </div>
+    </header>
+    
+        <section class="main_visual">
+            <img src="images/cafe01.jpg" alt="메인이미지" />
+            <div>
+                <h2>OVER THE NETWORK</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Doloremque quas rem similique iure quos optio, alias ut. <br> Quam quis quasi expedita minus aliquam, harum soluta? <br>Similique pariatur earum numquam?</p>
+            </div>
+        </section><!-- .main_visual end -->
+
+        <section class="cont01">
+            <div class="title">
+                <h3>section title</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br>Praesentium nisi culpa laboriosam, quam ipsam esse unde enim sint aperiam.</p>
+            </div><!-- .title end -->
+            <div class="list">
+                <div>
+                    <img src="images/cafe03.jpg" alt="카페"/>
+                    <a href="#">
+                        <h4>고속화물페리</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae atque totam quos veritatis a nemo voluptate optio. Maxime odit deleniti quos sint corrupti rem accusantium vero. Necessitatibus suscipit dolorem ullam!</p>
+                    </a>
+                </div>
+                <div>
+                    <img src="images/coffee03.jpg" alt="커피1"/>
+                    <a href="#">
+                        <h4>크루즈여행</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae atque totam quos veritatis a nemo voluptate optio. Maxime odit deleniti quos sint corrupti rem accusantium vero. Necessitatibus suscipit dolorem ullam!</p>
+                    </a>
+                </div>
+                <div>
+                    <img src="images/coffee05.jpg" alt="커피2"/>
+                    <a href="#">
+                        <h4>국제특송</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae atque totam quos veritatis a nemo voluptate optio. Maxime odit deleniti quos sint corrupti rem accusantium vero. Necessitatibus suscipit dolorem ullam!</p>
+                    </a>
+                </div>
+                <div>
+                    <img src="images/food01.jpg" alt="음식"/>
+                    <a href="#">
+                        <h4>자동차정비기기</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae atque totam quos veritatis a nemo voluptate optio. Maxime odit deleniti quos sint corrupti rem accusantium vero. Necessitatibus suscipit dolorem ullam!</p>
+                    </a>
+                </div>
+            </div><!-- .list end -->
+        </section><!-- .cont01 end -->
+        <footer id="bottom">
+            copright 2022 장수빈. All rights reserved.
+        </footer>
+
+        <aside>
+            <ul>
+                <li><a href="#top">위로</a></li>
+                <li><a href="#bottom">아래로</a></li>
+            </ul>
+        </aside>
+</body>
+</html>

@@ -1,0 +1,150 @@
+@charset "utf=8";
+
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none; color: #333;}
+body {color: #333;}
+
+/* 모바일 */
+.mobile {display: none;}
+.mobile_menu {display: none;}
+
+/* header 시작 */
+header {
+    height: 100px; width: 100%;
+    background-color: rgba(0, 0, 0, 0.336); 
+    position: absolute; top: 0; left: 0; z-index: 9;
+}
+header div {
+    max-width: 1440px; width: 95%; height: 100%;
+    margin: 0 auto; 
+    display: flex; justify-content: space-between;
+    align-items: center;
+}
+/* h1태그가 기본적으로 가지고있는 line-height 값이 있다.*/
+header div h1 {line-height: 0;}
+header div h1 a img {width: 200px;}
+header .pc_menu ul {display: flex; }
+/* header .pc_menu ul li {border-right: 1px solid #fff;} */
+header .pc_menu ul li a {padding: 0 20px; color: #fff;}
+
+
+/* .main_visual 시작 */
+.main_visual {height: 100vh; position: relative;}
+.main_visual img {width: 100%; height: 100%; object-fit: cover;}
+.main_visual div {
+    max-width: 1440px; width: 95%;
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    color: #2e3233; mix-blend-mode: multiply;
+}
+.main_visual div h2 {font-size: 50px; margin-bottom: 20px;}
+.main_visual div p {font-size: 20px; font-weight: bold; font-style: italic;}
+
+
+/* .cont01 시작 */
+.cont01 {padding: 150px 0;}
+.cont01 .title {text-align: center; margin-bottom: 40px;}
+.cont01 .title h3 {font-size: 40px;}
+.cont01 .list {
+    max-width: 1440px; width: 95%; margin: 0 auto; 
+    display: flex; justify-content: space-between;
+    flex-wrap: wrap; /* 공간이 없을때 밑으로 나열 flex-wrap:wrap 사용 */
+}
+
+.cont01 .list div {
+    width: 24%; height: 420px; background-color: rgb(235, 190, 154); 
+    border-radius: 20px; overflow: hidden;
+}
+.cont01 .list div img {
+    width: 100%; height: 50%; object-fit: cover;  transition: 1s;
+    transform: scale(3);
+}
+
+.cont01 .list div:hover img {transform: scale(1); mix-blend-mode: normal;}
+.cont01 .list div:hover p {display: block; margin-bottom: 10px;}
+.cont01 .list div:hover h4 {color: #333;}
+
+.cont01 .list div a {
+    display: block; width: 100%; height: 50%; text-align: center;
+    display: flex; flex-wrap: wrap; align-content: flex-end;
+}
+.cont01 .list div a h4 {
+    width: 100%; font-size: 22px; margin-bottom: 15px;
+    /* display:flex; 가 있는 상태에서는 position을 넣지 않아도 z-index가 적용된다. */
+    position:relative; z-index: 22; color: #fff;
+}
+.cont01 .list div a p {display: none;}
+
+/* footer 시작 */
+footer {
+    padding: 50px 0; background-color: #333; color: #fff; 
+    text-align: center; font-size: 14px;
+}
+
+
+
+/* 중단점 1024px 이하일때 pc메뉴 사라지고 햄버거아이콘 적용 */
+@media screen and (max-width:1024px) {
+    .pc_menu {display: none;}
+    .mobile {display: block; font-size: 35px; color: #fff;}
+    .mobile span {position: absolute; left: -999999999999999px;}
+
+    /* .cont01 */
+    .cont01 {background-color: antiquewhite;}
+    .cont01 .list div {
+        width: 48%; 
+        height: auto;
+        /* 기존에 있는 420px의 고정값을 자식이 가지는 영역만큼 
+        자유롭게 지닐 수 있도록 설정 */
+        margin-bottom: 40px; 
+        background-color: #fff;
+    }
+    .cont01 .list div img {
+        transform: scale(1); 
+        height: 300px;
+    }
+    .cont01 .list div a {
+        height: auto;
+        padding: 20px; 
+        box-sizing: border-box;
+    }
+    .cont01 .list div img {transform: scale(1);}
+    .cont01 .list div a h4 {color: #333;}
+    .cont01 .list div a p {display: block; margin-bottom: 10px;}
+}
+
+
+/* 중단점 640px 이하일때 pc메뉴 사라지고 햄버거아이콘 적용 */
+@media screen and (max-width:640px) {
+
+    /* .main_visual */
+    .main_visual div h2 {font-size: 32px;}
+    .main_visual div p {font-size: 16px;}
+
+    /* .cont01 */
+    .cont01 {
+        padding: 80px 0;
+    }
+    .cont01 .list div {width: 100%;}
+}
+
+
+/* aside */
+aside {
+    position: fixed;
+    bottom: 70px;
+    right: 50px;
+}
+
+aside ul li {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    line-height: 60px;
+    text-align: center;
+    margin-top: 10px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.479);
+}
+
+aside ul li a {display: block;}
